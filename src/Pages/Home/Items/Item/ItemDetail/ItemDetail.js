@@ -1,14 +1,18 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './ItemDetail.css'
 
 
 
 const ItemDetail = ({ item }) => {
-    const { name, img, price } = item;
-    // const navigate = useNavigate();
-    // console.log(img);
+    const { id, name, img, price } = item;
+    const navigate = useNavigate();
 
+    const navigateToFullDetails = id => {
+        navigate(`/ITEM/${id}`)
+    }
+    
     return (
         <div>
             <Card className='items'>
@@ -22,36 +26,11 @@ const ItemDetail = ({ item }) => {
                     </Card.Text>
                 </Card.Body>
                 <Card>
-                <Button variant="primary" type="submit">
-                    Booking
+                <Button onClick={() =>navigateToFullDetails(id)} variant="primary" type="submit">
+                    Manage
                 </Button>
                 </Card>
             </Card>
-
-
-
-
-
-
-
-
-
-
-
-
-            {/* <Col className="items">
-                <Card>
-                    <Card.Img src={img} alt=""/>
-                    <Card.Body>
-                        <Card.Title>{name}</Card.Title>
-                        <h5>Price:{price}</h5>
-                        <Card.Text>
-                            This is a longer card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit longer.
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-            </Col> */}
         </div>
     );
 };

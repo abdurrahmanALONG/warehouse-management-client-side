@@ -5,3 +5,11 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+
+
+/* make services responsive */
+@media only screen and (max-width:576px) {
+    .itemsshow {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

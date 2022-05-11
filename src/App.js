@@ -10,6 +10,9 @@ import BlogsQA from './Pages/Login/BlogsQA/BlogsQA';
 import MyItems from './Pages/Login/MyItems/MyItems';
 import Registration from './Pages/Login/Registration/Registration';
 import NotFound from './Pages/Login/NotFound/NotFound';
+import FullDetails from './Pages/Home/Items/Item/ItemDetail/FullDetails/FullDetails';
+import RequireAuth from './RequireAuth/RequireAuth';
+import CheckOut from './CheckOut/CheckOut';
 
 const App = () => {
   return (
@@ -17,14 +20,20 @@ const App = () => {
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/HOME" element={<Home></Home>}></Route>
-        <Route path="/ITEMS" element={<Items></Items>}></Route>
-        <Route path="/SERVICES" element={<Services></Services>}></Route>
-        <Route path="/LOGIN" element={<Login></Login>}></Route>
-        <Route path="/BLOGS-QA" element={<BlogsQA></BlogsQA>}></Route>
-        <Route path="/MY-ITEMS" element={<MyItems></MyItems>}></Route>
-        <Route path="/REGISTRATION" element={<Registration></Registration>}></Route>
-        <Route path="*" element={<NotFound></NotFound>}></Route>
+        <Route path="/Home" element={<Home></Home>}></Route>
+        <Route path="/Items" element={<Items></Items>}></Route>
+        <Route path="/Item/:ItemID" element={<FullDetails></FullDetails>}></Route>
+        <Route path="/Services" element={<Services></Services>}></Route>
+        <Route path="/Login" element={<Login></Login>}></Route>
+        <Route path="/Blogs-QA" element={<BlogsQA></BlogsQA>}></Route>
+        <Route path="/My-Items" element={<MyItems></MyItems>}></Route>
+        <Route path="/Registration" element={<Registration></Registration>}></Route>
+        <Route path="CheckOut" element={
+        <RequireAuth>
+          <CheckOut></CheckOut>
+        </RequireAuth>}>  
+        </Route>
+        <Route path="*"element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
   );
