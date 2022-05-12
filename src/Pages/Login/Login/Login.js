@@ -17,13 +17,19 @@ const Login = () => {
     const passwordRef = useRef('');
     const navigate = useNavigate();
     const location = useLocation();
-
+    let errorHandel;
 
     let from = location.state?.from?.pathname || "/";
 
 
     const navigateRegiestarPage = event => {
         navigate('/Registration');
+    }
+
+    if (error) {
+        errorHandel = <div>
+            <p className='text-danger'>Error: {error?.message}</p>
+        </div>
     }
 
     if (user) {
