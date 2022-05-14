@@ -1,7 +1,8 @@
 import React from 'react';
 import Banner from './Banner/Banner';
-import Footer from './Footer/Footer';
+import Explor from './Explor/Explor';
 import Item from './Items/Item/Item';
+import Ourblogs from './Ourblogs/Ourblogs';
 
 const Home = () => {
     return (
@@ -10,7 +11,12 @@ const Home = () => {
             <div>
                 <Item></Item>
             </div>
-            <Footer></Footer>
+            <div>
+                <Ourblogs></Ourblogs>
+            </div>
+            <div>
+                <Explor></Explor>
+            </div>
         </div>
     );
 };

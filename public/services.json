@@ -1,44 +1,56 @@
 [
     {
-        "id": "1",
-        "price": 70000,
-        "name": "Disaining",
-        "details": "With over 10 years of experience and a national presence, AR Construction Consulting has the depth of knowledge and operational capacity to provide design and construction services when you need them, where you need them.",
-        "img": "https://i.ibb.co/JFfVyJ3/disaining.jpg"
+        "_id": "1",
+        "price":50,
+        "name": "MACBOOK",
+        "quantity":1000,
+        "suppliername":"A.Rahman",
+        "details": " Trade-in values will vary based on the condition, year, and configuration of your eligible trade-in device. Not all devices are eligible for credit. You must be at least 18 years old to be eligible to trade in for credit or for an Apple Gift Card.",
+        "img": "https://i.ibb.co/S3g0PST/extra-1.jpg"
     },
     {
-        "id": "2",
-        "price": 50000,
-        "name": "Planing",
-        "details": "We offers a diverse range of solutions meeting this requirement, and which can be combined to create bespoke packages or applied as standalone services.",
-        "img": " https://i.ibb.co/0mcKYDG/planing.jpg"
+        "_id": "2",
+        "price":30,
+        "name": "iPHONE",
+        "quantity":1000,
+        "suppliername":"A.Rahman",
+        "details": "Everything you love about an Apple in our Warehouse: all the products, personal shopping help, trade-in, flexible payment options, and expert support.",
+        "img": " https://i.ibb.co/f1X0QTp/extra-2.jpg"
     },
     {
-        "id": "3",
-        "price": 16000,
-        "name": "Profesonal-drawing",
-        "details": " I am Consulting  the depth of knowledge and operational capacity to provide design and construction services when you need them, where you need them.",
-        "img": "https://i.ibb.co/Z8MJFQp/profesonal-drawing.jpg"
+        "_id": "3",
+        "price":60,
+        "name": "ANDROID",
+        "quantity":1000,
+        "suppliername":"A.Rahman",
+        "details": "Get a cheap phone contract warehouse for the mobile you really want with our pay monthly phone deals. Check out our latest service contracts with easy monthly payments.",
+        "img": "https://i.ibb.co/ZzGzfwr/extra-3.jpg"
     },
     {
-        "id": "4",
-        "price": 10000,
-        "name": "Laboratory-testing",
-        "details": "Structural bearings are critical elements of structures - most notably bridges that provide a load-bearing connection between the superstructure and substructure while allowing the required movements. ",
-        "img": " https://i.ibb.co/NCKf5Bq/laboratory-testing.jpg"
+        "_id": "4",
+        "price":90,
+        "name": "LCD-MONITOR",
+        "quantity":1000,
+        "suppliername":"A.Rahman",
+        "details": "Sent data directly from your WMS to your IPdisplays' LCD/LED Display. Send real-time data to inform smart decisions and improve efficiency and productivity.",
+        "img": "https://i.ibb.co/mXcBZCq/extra-5.jpg"
     },
     {
-        "id": "5",
-        "price": 7000,
-        "name": "Risk-strategy",
-        "details": "Whether you are in the midst of a property transaction or dealing with regulatory concerns, you need to understand the risks associated with a property.",
-        "img": " https://i.ibb.co/CKjjvB7/risk-strategy.jpg"
+        "_id": "5",
+        "price":35,
+        "name": "iPAD",
+        "quantity":1000,
+        "suppliername":"A.Rahman",
+        "details": " Get extra trade-in credit when you trade in an eligible iPhone, iPad, Mac, or Apple Watch and purchase a new Apple device through May 31, 2022.",
+        "img": "https://i.ibb.co/FgT6j6w/extra-6.jpg"
     },
     {
-        "id": "6",
-        "price": 5000,
-        "name": "Site-inspection",
-        "details": " Professional engineers apply their vast knowledge and expertise to deliver high-quality, cost-conscious technical services with a focus on constructability and sustainable design solutions.",
-        "img": " https://i.ibb.co/82jWdTK/site-inspection.jpg"
+        "_id": "6",
+        "price":55,
+        "name": "i-ACCESSORIES",
+        "quantity":1000,
+        "suppliername":"A.Rahman",
+        "details": "Our accessories are designed, engineered, and built for Mac, iPad, and iPhone – and we're obsessed with creating devices that don't just complement the Apple.",
+        "img": "https://i.ibb.co/6gYPDqm/extra-4.jpg"
     }
 ]

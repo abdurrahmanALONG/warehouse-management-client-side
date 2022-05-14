@@ -5,10 +5,10 @@ const FullDetails = () => {
 const { ItemID } = useParams();
 
     return (
-        <div>
-            <h1>This is the fulldetails id:{ItemID}</h1>
-            <Link to="/CheckOut">
-                <button className='btn btn-primary'> Checout</button>
+        <div className='mt-3 text-center'>
+            <h1 className='text-center'>This is the full Details id no:{ItemID}</h1>
+            <Link to="/CheckOut" className='btn btn-primary pe-auto text-center'>
+            CheckOut
             </Link>
         </div>
     );

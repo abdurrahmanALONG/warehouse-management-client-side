@@ -12,35 +12,24 @@ const Banner = () => {
             <Carousel fade>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100 hight"
-                        src={Banner1}
+                        className="d-block w-100 hights"
+                        src={Banner3}
                         alt="First slide"
                     />
-                    <Carousel.Caption>
-                        <h3>First slide label</h3>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100 hight"
+                        className="d-block w-100 hights"
                         src={Banner2}
                         alt="Second slide"
                     />
-
-                    <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100 hight"
-                        src={Banner3}
+                        className="d-block w-100 hights"
+                        src={Banner1}
                         alt="Third slide"
                     />
-
-                    <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                    </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
         </div>

@@ -12,12 +12,12 @@ const Item = () => {
   
 
     return (
-        <div>
-            <h1>OUR ITEMS</h1>
+        <div className='my-4'>
+            <h1 className=' mb-3 text-center'>OUR ITEMS</h1>
             <div className='itemsshow'>
                 {
                     items.map(item  =><ItemDetail
-                    key={item.id}
+                    key={item._id}
                     item={item}
                     ></ItemDetail>)
                 }

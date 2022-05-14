@@ -8,8 +8,8 @@ const Footer = () => {
     return (
         <div>
            <Container>
-               <footer className='Footer'>
-                   <h6>Copyright @ {year} </h6>
+               <footer className='Footer mt-5'>
+                   <h6><small>Copyright @ {year}</small></h6>
                </footer>
            </Container>
         </div>

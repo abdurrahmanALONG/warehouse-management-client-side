@@ -6,7 +6,7 @@ import './ItemDetail.css'
 
 
 const ItemDetail = ({ item }) => {
-    const { id, name, img, price } = item;
+    const { _id, name, img, price, quantity, suppliername, details } = item;
     const navigate = useNavigate();
 
     const navigateToFullDetails = id => {
@@ -20,13 +20,12 @@ const ItemDetail = ({ item }) => {
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <h6>Price:{price}</h6>
-                    <Card.Text>
-                        This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.
-                    </Card.Text>
+                    <h6>Quantity:{quantity}</h6>                  
+                    <h6>Supplier Name: { suppliername}</h6>
+                    <p>{details}</p>                  
                 </Card.Body>
                 <Card>
-                <Button onClick={() =>navigateToFullDetails(id)} variant="primary" type="submit">
+                <Button onClick={() =>navigateToFullDetails(_id)} variant="primary" type="submit">
                     Manage
                 </Button>
                 </Card>
