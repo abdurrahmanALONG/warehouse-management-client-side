@@ -1,6 +1,5 @@
 [
     {
-        "_id": "1",
         "price":50,
         "name": "MACBOOK",
         "quantity":1000,
@@ -9,7 +8,6 @@
         "img": "https://i.ibb.co/S3g0PST/extra-1.jpg"
     },
     {
-        "_id": "2",
         "price":30,
         "name": "iPHONE",
         "quantity":1000,
@@ -18,7 +16,6 @@
         "img": " https://i.ibb.co/f1X0QTp/extra-2.jpg"
     },
     {
-        "_id": "3",
         "price":60,
         "name": "ANDROID",
         "quantity":1000,
@@ -27,7 +24,6 @@
         "img": "https://i.ibb.co/ZzGzfwr/extra-3.jpg"
     },
     {
-        "_id": "4",
         "price":90,
         "name": "LCD-MONITOR",
         "quantity":1000,
@@ -36,7 +32,6 @@
         "img": "https://i.ibb.co/mXcBZCq/extra-5.jpg"
     },
     {
-        "_id": "5",
         "price":35,
         "name": "iPAD",
         "quantity":1000,
@@ -45,7 +40,6 @@
         "img": "https://i.ibb.co/FgT6j6w/extra-6.jpg"
     },
     {
-        "_id": "6",
         "price":55,
         "name": "i-ACCESSORIES",
         "quantity":1000,
