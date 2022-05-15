@@ -1,30 +1,26 @@
 [
     {
-        "_id": "1",
         "price": 70,
         "name": "Maintenance",
-        "details": "With over 10 years of experience and a national presence, AR Construction Consulting has the depth of knowledge and operational capacity to provide design and construction services when you need them, where you need them.",
+        "details": "With over 10 years of experience and a international presence, We have the depth knowledge and management capacity to handel all the services when you need us, where you need us.",
         "img": "https://i.ibb.co/MPtbrbS/extra-1.jpg"
     },
     {
-        "_id": "2",
         "price": 50,
         "name": "Delivery-Plan",
         "details": "We offers a diverse range of solutions meeting this requirement, and which can be combined to create bespoke packages or applied as standalone services.",
         "img": "https://i.ibb.co/DDpzqpV/extra-2.jpg"
     },
     {
-        "_id": "3",
         "price": 16,
         "name": "Location-Updating",
-        "details": " I am Consulting  the depth of knowledge and operational capacity to provide design and construction services when you need them, where you need them.",
+        "details": "We are Consulting  the depth of knowledge and operational capacity to manage location design and 24 hours services when you need your products, where you your products.",
         "img": "https://i.ibb.co/cxcjTNw/extra-3.jpg"
     },
     {
-        "_id": "4",
         "price": 10,
         "name": "Inside-Warehouse",
-        "details": "Structural bearings are critical elements of structures - most notably bridges that provide a load-bearing connection between the superstructure and substructure while allowing the required movements. ",
+        "details": " Our Warehouse Structur bearings are  bast manageble structures - most notably shipping services that  connected between us. ",
         "img": "https://i.ibb.co/DwFSmc2/extra-4.jpg"
     }
 ]

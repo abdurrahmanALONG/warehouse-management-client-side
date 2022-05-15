@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ItemDetail from './ItemDetail/ItemDetail';
 import './Item.css'
+import { Link } from 'react-router-dom';
 
 const Item = () => {
     const [items, setItems] = useState([]);
@@ -22,6 +23,11 @@ const Item = () => {
                     ></ItemDetail>)
                 }
 
+            </div>
+            <div className='my-3 text-center'>
+            <Link to="/Items" className='btn btn-primary pe-auto text-center'>
+            Manage Inventories
+            </Link>
             </div>
 
         </div>

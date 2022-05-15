@@ -11,7 +11,7 @@ const Ourblogs = () => {
 
     return (
         <div className='my-5'>
-            <h1 className='text-center mb-4 '>Our Wearhouse Blogs</h1>
+            <h1 className=' mb-4 '>Our Wearhouse Blogs</h1>
             <div className='ourblogs'>
                 <div className='blogitem'>
                     <h5>WAREHOUSING</h5>

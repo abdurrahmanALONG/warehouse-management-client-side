@@ -26,7 +26,7 @@ const ItemDetail = ({ item }) => {
                 </Card.Body>
                 <Card>
                 <Button onClick={() =>navigateToFullDetails(_id)} variant="primary" type="submit">
-                    Manage
+                Stock Update
                 </Button>
                 </Card>
             </Card>

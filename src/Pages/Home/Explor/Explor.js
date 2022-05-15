@@ -5,7 +5,7 @@ import './Explor.css'
 const Explor = () => {
     const [exporItems, setExplorItems] = useState([]);
     useEffect(() =>{
-        fetch('extra.json')
+        fetch('http://localhost:5000/explor')
         .then(res => res.json())
         .then(data => setExplorItems(data))
     },[]);
