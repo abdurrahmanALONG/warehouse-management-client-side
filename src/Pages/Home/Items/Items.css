@@ -1,0 +1,15 @@
+.itemsallshow{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/* make services responsive */
+@media only screen and (max-width:576px) {
+    .itemsallshow {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

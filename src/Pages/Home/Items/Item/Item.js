@@ -17,7 +17,7 @@ const Item = () => {
             <h1 className=' mb-3 text-center'>OUR ITEMS</h1>
             <div className='itemsshow'>
                 {
-                    items.map(item  =><ItemDetail
+                    items.slice(0,6).map(item  =><ItemDetail
                     key={item._id}
                     item={item}
                     ></ItemDetail>)
@@ -29,7 +29,6 @@ const Item = () => {
             Manage Inventories
             </Link>
             </div>
-
         </div>
     );
 };

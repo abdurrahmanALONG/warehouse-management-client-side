@@ -31,14 +31,21 @@ const Header = () => {
                             </NavDropdown>
                         </Nav>
                         <Nav>
-                            <Nav.Link href="My-Items">MY-ITEMS</Nav.Link>
                             <Nav.Link href="Blogs-QA">BLOGS-QA</Nav.Link>
-                        
-                               { user ?
-                               <button onClick={handelSignOut}> Sign Out </button>                                
-                                :<Nav.Link href="Login">
+                            {
+                                user && <>
+                                    <Nav.Link href="AddInventory">Add Item</Nav.Link>
+                                    <Nav.Link href="Items">Manage Items</Nav.Link>
+                                    <Nav.Link href="My-Items">MY-ITEMS</Nav.Link>
+
+                                </>
+                            }
+
+                            {user ?
+                                <button onClick={handelSignOut}> Sign Out </button>
+                                : <Nav.Link href="Login">
                                     LOGIN
-                                </Nav.Link> }
+                                </Nav.Link>}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

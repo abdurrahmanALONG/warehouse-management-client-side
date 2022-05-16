@@ -17,6 +17,8 @@ import Ourblogs from './Pages/Home/Ourblogs/Ourblogs';
 import OurblogsDetails from './Pages/Home/Ourblogs/OurblogsDetails';
 import ExplorItemsDetails from './Pages/Home/Explor/ExplorItemsDetails';
 import Footer from './Pages/Home/Footer/Footer';
+import AddInventory from './Pages/Home/Items/AddInventory/AddInventory';
+import ItemsAll from './Pages/Home/Items/ItemsAll';
 
 const App = () => {
   return (
@@ -25,12 +27,11 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/Home" element={<Home></Home>}></Route>
-        <Route path="/Items" element={<Items></Items>}></Route>
         <Route path="/Item/:ItemID" element={
           <RequireAuth>
             <FullDetails></FullDetails>
           </RequireAuth>}>
-          </Route>
+        </Route>
         <Route path="/Explor" element={<Explor></Explor>}></Route>
         <Route path="/ExplorItemsDetails" element={<ExplorItemsDetails></ExplorItemsDetails>}></Route>
         <Route path="/Ourblogs" element={<Ourblogs></Ourblogs>}></Route>
@@ -39,6 +40,12 @@ const App = () => {
         <Route path="/Blogs-QA" element={<BlogsQA></BlogsQA>}></Route>
         <Route path="/My-Items" element={<MyItems></MyItems>}></Route>
         <Route path="/Registration" element={<Registration></Registration>}></Route>
+        <Route path="/AddInventory" element={<AddInventory></AddInventory>}></Route>
+        <Route path="/Items" element={
+          <RequireAuth>
+            <Items></Items>
+          </RequireAuth>}>
+        </Route>
         <Route path="CheckOut" element={
           <RequireAuth>
             <CheckOut></CheckOut>
