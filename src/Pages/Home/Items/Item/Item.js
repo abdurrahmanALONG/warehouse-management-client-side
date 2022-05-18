@@ -10,8 +10,8 @@ const Item = () => {
             .then(res => res.json())
             .then(data =>setItems(data));
     }, [])
-  
 
+    
     return (
         <div className='my-4'>
             <h1 className=' mb-3 text-center'>OUR ITEMS</h1>
@@ -20,6 +20,7 @@ const Item = () => {
                     items.slice(0,6).map(item  =><ItemDetail
                     key={item._id}
                     item={item}
+                    // handleUpdateQuantity = {handleUpdateQuantity}
                     ></ItemDetail>)
                 }
 

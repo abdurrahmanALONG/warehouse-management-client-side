@@ -18,7 +18,6 @@ import OurblogsDetails from './Pages/Home/Ourblogs/OurblogsDetails';
 import ExplorItemsDetails from './Pages/Home/Explor/ExplorItemsDetails';
 import Footer from './Pages/Home/Footer/Footer';
 import AddInventory from './Pages/Home/Items/AddInventory/AddInventory';
-import ItemsAll from './Pages/Home/Items/ItemsAll';
 
 const App = () => {
   return (

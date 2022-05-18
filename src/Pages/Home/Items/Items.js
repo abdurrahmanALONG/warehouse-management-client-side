@@ -9,7 +9,7 @@ const Items = () => {
     useEffect(() => {
         fetch('http://localhost:5000/item')
             .then(res => res.json())
-            .then(data =>setItemsall(data));
+            .then(data => setItemsall(data));
     }, [])
 
     const handelDelete = id => {
@@ -34,17 +34,17 @@ const Items = () => {
             <h2 className='text-center'>All items</h2>
             <div className='itemsAllshow'>
                 {
-                    itemsall.map(item =><ItemsAll
-                    key ={item._id}
-                    item ={item}
-                    handelDelete = {handelDelete}
+                    itemsall.map(item => <ItemsAll
+                        key={item._id}
+                        item={item}
+                        handelDelete={handelDelete}
                     ></ItemsAll>)
                 }
             </div>
             <div className='my-3 text-center'>
-            <Link to="/AddInventory" className='btn btn-primary pe-auto text-center'>
-            Add New Inventories
-            </Link>
+                <Link to="/AddInventory" className='btn btn-primary pe-auto text-center'>
+                    Add New Inventories
+                </Link>
             </div>
             <ToastContainer></ToastContainer>
         </div>

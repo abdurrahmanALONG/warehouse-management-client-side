@@ -7,15 +7,17 @@ import './MyItems.css'
 
 const MyItems = () => {
     const [user] = useAuthState(auth);
-    console.log(user.email);
+    console.log(user);
     const [myitems, setMyItems] = useState([]);
     useEffect(() => {
-            fetch(`http://localhost:5000/item?email=${user.email}`)
+            if(user){
+                fetch(`http://localhost:5000/item?email=${user.email}`)
                 .then(res => res.json())
                 .then(data => setMyItems(data));
+            }
       
 
-    }, [])
+    }, [user])
 
     const handelDelete = id => {
         const proceed = window.confirm('Are you sure?');
