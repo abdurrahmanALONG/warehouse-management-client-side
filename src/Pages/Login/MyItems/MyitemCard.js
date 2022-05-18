@@ -1,12 +1,13 @@
+import React from 'react';
 import { Card } from 'react-bootstrap';
-import './Items.css'
+import './MyItems.css'
 
-const ItemsAll = ({ item, handelDelete }) => {
-    const { _id, name, img, price, quantity, suppliername, details, email } = item;
+const MyitemCard = ({myitem, handelDelete}) => {
+    const { _id, name, img, price, quantity, suppliername, details, email } = myitem;
     
     return (
         <div>
-            <Card className='itemsdelete'>
+            <Card className='myitem'>
                 <Card.Img className='deleteImg' variant="top" src={img} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
@@ -17,7 +18,7 @@ const ItemsAll = ({ item, handelDelete }) => {
                     <p>{details}</p>
                 </Card.Body>
                 <Card.Body className='mx-auto'>
-                    <Card.Link className='btn btn-primary pe-auto mx-2 text-center' onClick={() => handelDelete(item._id)}>
+                    <Card.Link className='btn btn-primary pe-auto mx-2 text-center'  onClick={() => handelDelete(myitem._id)} >
                         Delete
                     </Card.Link>
                 </Card.Body>
@@ -26,4 +27,4 @@ const ItemsAll = ({ item, handelDelete }) => {
     );
 };
 
-export default ItemsAll;
+export default MyitemCard;

@@ -2,14 +2,18 @@ import React from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../../firebase.init';
-import logo from '../../../../images/google-logo.png'
+import logo from '../../../../images/google-logo.png';
+import Loding from '../../../../Loding/Loding';
+
 
 const GoogleLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
     let errorHandel;
 
-
+    if (loading) {
+        return <Loding></Loding>
+    }
     if (error) {
         errorHandel = <div>
             <p className='text-danger'>Error: {error?.message}</p>

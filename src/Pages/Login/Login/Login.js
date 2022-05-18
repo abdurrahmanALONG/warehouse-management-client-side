@@ -1,10 +1,13 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import GoogleLogin from './GoogleLogin/GoogleLogin';
+import Loding from '../../../Loding/Loding';
 import './Login.css'
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const [
@@ -18,14 +21,19 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     let errorHandel;
-
     let from = location.state?.from?.pathname || "/";
+
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
+
 
 
     const navigateRegiestarPage = event => {
         navigate('/Registration');
     }
-
+    if (loading || sending) {
+        return <Loding></Loding>
+    }
     if (error) {
         errorHandel = <div>
             <p className='text-danger'>Error: {error?.message}</p>
@@ -44,6 +52,18 @@ const Login = () => {
 
         signInWithEmailAndPassword(email, password);
 
+    }
+
+
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email Successfully');
+        }
+        else {
+            toast('please enter your email address');
+        }
     }
 
     return (
@@ -70,7 +90,9 @@ const Login = () => {
                 </Button>
             </Form>
             <p> If you are new here... <Link to="/REGISTRATION" className='text-primary pe-auto text-decoration-none' onClick={navigateRegiestarPage}>Please Register First</Link> </p>
+            <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
             <GoogleLogin></GoogleLogin>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
