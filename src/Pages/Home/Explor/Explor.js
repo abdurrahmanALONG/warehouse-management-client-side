@@ -4,25 +4,25 @@ import './Explor.css'
 
 const Explor = () => {
     const [exporItems, setExplorItems] = useState([]);
-    useEffect(() =>{
-        fetch('http://localhost:5000/explor')
-        .then(res => res.json())
-        .then(data => setExplorItems(data))
-    },[]);
+    useEffect(() => {
+        fetch('https://still-inlet-24305.herokuapp.com/explor')
+            .then(res => res.json())
+            .then(data => setExplorItems(data))
+    }, []);
 
 
 
     return (
         <div className='my-5'>
             <h1 className='text-center mb-3'>EXPLOR US</h1>
-           <div className='exploritem'>
-           {
-                exporItems.map( explorItem =><ExplorItems
-                key={explorItem._id}
-                explorItem = {explorItem}
-                ></ExplorItems>)
-            }
-           </div>
+            <div className='exploritem'>
+                {
+                    exporItems.map(explorItem => <ExplorItems
+                        key={explorItem._id}
+                        explorItem={explorItem}
+                    ></ExplorItems>)
+                }
+            </div>
         </div>
     );
 };

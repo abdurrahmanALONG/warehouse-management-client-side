@@ -6,29 +6,28 @@ import { Link } from 'react-router-dom';
 const Item = () => {
     const [items, setItems] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/item')
+        fetch('https://still-inlet-24305.herokuapp.com/item')
             .then(res => res.json())
-            .then(data =>setItems(data));
+            .then(data => setItems(data));
     }, [])
 
-    
+
     return (
         <div className='my-4'>
             <h1 className=' mb-3 text-center'>OUR ITEMS</h1>
             <div className='itemsshow'>
                 {
-                    items.slice(0,6).map(item  =><ItemDetail
-                    key={item._id}
-                    item={item}
+                    items.slice(0, 6).map(item => <ItemDetail
+                        key={item._id}
+                        item={item}
                     // handleUpdateQuantity = {handleUpdateQuantity}
                     ></ItemDetail>)
                 }
-
             </div>
             <div className='my-3 text-center'>
-            <Link to="/Items" className='btn btn-primary pe-auto text-center'>
-            Manage Inventories
-            </Link>
+                <Link to="/Items" className='btn btn-primary pe-auto text-center'>
+                    Manage Inventories
+                </Link>
             </div>
         </div>
     );

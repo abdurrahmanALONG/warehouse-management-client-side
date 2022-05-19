@@ -4,6 +4,8 @@ import './Items.css'
 const ItemsAll = ({ item, handelDelete }) => {
     const { _id, name, img, price, quantity, suppliername, details, email } = item;
 
+
+
     return (
         <div>
             <Card className='itemsdelete'>

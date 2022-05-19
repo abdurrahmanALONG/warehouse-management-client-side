@@ -4,7 +4,6 @@ import './Ourblogs.css'
 
 const Ourblogs = () => {
     const navigate = useNavigate();
-
     const navigateOurblogsDetailsPage = event => {
         navigate('/OurblogsDetails');
     }
@@ -18,11 +17,11 @@ const Ourblogs = () => {
                     <p><Link to="/OurblogsDetails" className='text-primary pe-auto text-decoration-none' onClick={navigateOurblogsDetailsPage}>Learn more..</Link> </p>
                 </div>
                 <div className='blogitem'>
-                <h5>PAKAGING & STORAGE</h5>
+                    <h5>PAKAGING & STORAGE</h5>
                     <p><Link to="/OurblogsDetails" className='text-primary pe-auto text-decoration-none' onClick={navigateOurblogsDetailsPage} >Learn more..</Link> </p>
                 </div>
                 <div className='blogitem'>
-                <h5>TIME BOUND DELIVERIES</h5>
+                    <h5>TIME BOUND DELIVERIES</h5>
                     <p><Link to="/OurblogsDetails" className='text-primary pe-auto text-decoration-none' onClick={navigateOurblogsDetailsPage}>Learn more..</Link> </p>
                 </div>
             </div>

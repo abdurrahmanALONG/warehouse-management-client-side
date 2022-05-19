@@ -39,7 +39,6 @@ const GoogleLogin = () => {
                     <span className='px-2'>Google Sign In</span>
                 </button>
             </div>
-
         </div>
     );
 };

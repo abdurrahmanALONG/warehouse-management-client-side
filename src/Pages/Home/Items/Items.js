@@ -4,10 +4,11 @@ import ItemsAll from './ItemsAll';
 import './Items.css'
 import { toast, ToastContainer } from 'react-toastify';
 
+
 const Items = () => {
     const [itemsall, setItemsall] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/item')
+        fetch('https://still-inlet-24305.herokuapp.com/item')
             .then(res => res.json())
             .then(data => setItemsall(data));
     }, [])
@@ -15,7 +16,7 @@ const Items = () => {
     const handelDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/item/${id}`;
+            const url = `https://still-inlet-24305.herokuapp.com/item/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -28,6 +29,8 @@ const Items = () => {
                 })
         }
     }
+
+
 
     return (
         <div>

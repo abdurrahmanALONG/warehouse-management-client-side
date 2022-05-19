@@ -2,9 +2,11 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import './MyItems.css'
 
-const MyitemCard = ({myitem, handelDelete}) => {
+const MyitemCard = ({ myitem, handelDelete }) => {
     const { _id, name, img, price, quantity, suppliername, details, email } = myitem;
-    
+
+
+
     return (
         <div>
             <Card className='myitem'>
@@ -18,7 +20,7 @@ const MyitemCard = ({myitem, handelDelete}) => {
                     <p>{details}</p>
                 </Card.Body>
                 <Card.Body className='mx-auto'>
-                    <Card.Link className='btn btn-primary pe-auto mx-2 text-center'  onClick={() => handelDelete(myitem._id)} >
+                    <Card.Link className='btn btn-primary pe-auto mx-2 text-center' onClick={() => handelDelete(myitem._id)} >
                         Delete
                     </Card.Link>
                 </Card.Body>

@@ -6,14 +6,14 @@ const FullDetails = () => {
     const { ItemID } = useParams();
     const [item, setItem] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/item/${ItemID}`;
+        const url = `https://still-inlet-24305.herokuapp.com/item/${ItemID}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data));
 
     }, []);
 
-// This is for Add New Quantity
+    // This is for Add New Quantity
     const handleUpdateQuantity = event => {
         event.preventDefault();
         const oldQuantity = parseInt(item.quantity);
@@ -21,7 +21,7 @@ const FullDetails = () => {
         const totalNewQuantity = oldQuantity + newQuantity;
         const updatedQuantity = { totalNewQuantity };
 
-        const url = `http://localhost:5000/item/${item._id}`;
+        const url = `https://still-inlet-24305.herokuapp.com/item/${item._id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -41,15 +41,15 @@ const FullDetails = () => {
 
 
 
-// this is for Delivered
+    // this is for Delivered
     const handleDicrisQuantityByOne = event => {
         event.preventDefault();
         const quantityCurrent = parseInt(item.quantity);
         console.log(quantityCurrent);
         const totalNewQuantity = quantityCurrent - 1;
         console.log(totalNewQuantity);
-        const updatedQuantity = {totalNewQuantity};
-        const url = `http://localhost:5000/item/${item._id}`;
+        const updatedQuantity = { totalNewQuantity };
+        const url = `https://still-inlet-24305.herokuapp.com/item/${item._id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -84,7 +84,7 @@ const FullDetails = () => {
                         </Card.Body>
                         <Form.Group className="mb-3 text-center" controlId="formBasicnewQuantity">
                             <Button className='my-2' variant="primary" type="submit">
-                            Delivered
+                                Delivered
                             </Button>
                         </Form.Group>
                     </Form>

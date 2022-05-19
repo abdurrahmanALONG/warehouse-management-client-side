@@ -33,8 +33,6 @@ const RequireAuth = ({ children }) => {
             <ToastContainer></ToastContainer>
         </div>
     }
-
-
     return children;
 };
 

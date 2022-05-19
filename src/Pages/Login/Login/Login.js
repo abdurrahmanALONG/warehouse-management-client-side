@@ -22,15 +22,13 @@ const Login = () => {
     const location = useLocation();
     let errorHandel;
     let from = location.state?.from?.pathname || "/";
-
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
-
-
-
-
     const navigateRegiestarPage = event => {
         navigate('/Registration');
     }
+
+
+
     if (loading || sending) {
         return <Loding></Loding>
     }
@@ -39,19 +37,17 @@ const Login = () => {
             <p className='text-danger'>Error: {error?.message}</p>
         </div>
     }
-
     if (user) {
         navigate(from, { replace: true });
     }
+
 
     const handelLogin = (event) => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         // console.log( email, password);
-
         signInWithEmailAndPassword(email, password);
-
     }
 
 
@@ -77,7 +73,6 @@ const Login = () => {
                         We'll never share your email with anyone else.
                     </Form.Text>
                 </Form.Group>
-
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" />
