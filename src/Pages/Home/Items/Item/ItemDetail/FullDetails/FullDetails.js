@@ -32,7 +32,7 @@ const FullDetails = () => {
             .then(res => res.json())
             .then(data => {
                 console.log('success', data);
-                alert('Added successfully!!!');
+                alert('Are you sure!!!');
                 event.target.reset();
                 window.location.reload();
             })
@@ -60,7 +60,7 @@ const FullDetails = () => {
             .then(res => res.json())
             .then(data => {
                 console.log('success', data);
-                alert('Delivered successfully!!!');
+                alert('Are you sure!!!');
                 event.target.reset();
                 window.location.reload();
             })

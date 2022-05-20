@@ -8,6 +8,7 @@ import Loding from '../../../Loding/Loding';
 import './Login.css'
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 
 const Login = () => {
     const [
@@ -38,16 +39,19 @@ const Login = () => {
         </div>
     }
     if (user) {
-        navigate(from, { replace: true });
+        // navigate(from, { replace: true });
     }
 
 
-    const handelLogin = (event) => {
+    const handelLogin =  async(event) => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         // console.log( email, password);
-        signInWithEmailAndPassword(email, password);
+        await  signInWithEmailAndPassword(email, password);
+        const {data} = await axios.post('https://still-inlet-24305.herokuapp.com/login', {email});
+        localStorage.setItem('accessToken', data.accessToken);
+        navigate(from, { replace: true });
     }
 
 
