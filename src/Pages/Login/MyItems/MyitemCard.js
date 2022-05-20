@@ -4,6 +4,7 @@ import './MyItems.css'
 
 const MyitemCard = ({ myitemDelete, handelDelete }) => {
     const { name, img, price, quantity, suppliername, details, email } = myitemDelete;
+    console.log(email);
 
 
 

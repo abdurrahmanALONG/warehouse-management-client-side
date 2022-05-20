@@ -11,46 +11,31 @@ import './MyItems.css'
 
 const MyItems = () => {
     const [user] = useAuthState(auth);
-    // console.log(user);
+    console.log(user?.email);
     const navigate = useNavigate();
-    const [myitems, setMyItems] = useState([]);
-    console.log(myitems);
 
-    useEffect(() => {
-        const handelMyItem = async () => {
-            const email = user?.email;
-            const url = `https://still-inlet-24305.herokuapp.com/items?email=${email}`;
-                const {data} = await axios.get(url, {
-                    headers: {
-                        authorization: `Bearer ${localStorage.getItem('accessToken')}`
-                    }
-                });
-                setMyItems(data);
-            }
-            handelMyItem();
-        }, [user]);
+    // const [myitems, setMyItems] = useState([]);
+    // console.log(myitems);
 
-        //     try {
-        //         const { data } = await axiosPrivate.get(url);
-        //         setMyItems(data);
-
-        //     }
-        //     catch (error) {
-        //         console.log(error.message);
-        //         if (error.response.status === 401 || error.response.status === 403) {
-        //             signOut(auth);
-        //             navigate('/login')
-        //         }
-
-        //     }
-        // }
-        // handelMyItem();
+    // useEffect(() => {
+    //     const handelMyItem = async () => {
+    //         const email = user?.email;
+    //         const url = `https://still-inlet-24305.herokuapp.com/item?email=${email}`;
+    //         const { data } = await axios.get(url, {
+    //             headers: {
+    //                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
+    //             }
+    //         });
+    //         setMyItems(data);
+    //     }
+    //     handelMyItem();
     // }, [user]);
 
 
 
 
     const [myitemsDelete, setMyItemsDelete] = useState([]);
+    console.log(myitemsDelete);
     useEffect(() => {
         if (user) {
             fetch(`https://still-inlet-24305.herokuapp.com/item?email=${user?.email}`)
@@ -76,19 +61,21 @@ const MyItems = () => {
                 })
         }
     }
-
+    // console.log(myitemsDelete);
+    // console.log(myitems);
 
 
     return (
         <div>
-            <h1 className='text-center'>Your items: {myitems.length}</h1>
-            {/* <div>
-            {
+            <h1 className='text-center'>Your items: {myitemsDelete.length}</h1>
+            <h6 className='text-center'>User Email: {user?.email}</h6>
+            <div>
+                {/* {
                 myitems.map(myitem =><div key={myitem._id}>
                     <p>{myitem.email} : {myitem.name}</p>
                 </div>)
-            }
-            </div> */}
+            } */}
+            </div>
             <div className='myitemsAllshow'>
                 {
                     myitemsDelete.map(myitemDelete => <MyitemCard

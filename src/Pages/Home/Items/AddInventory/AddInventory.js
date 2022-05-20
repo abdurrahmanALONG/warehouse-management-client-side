@@ -7,10 +7,12 @@ import './AddInventory.css';
 
 const AddInventory = () => {
     const [user] = useAuthState(auth);
+    console.log(user?.email);
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data);
-        const url = `https://still-inlet-24305.herokuapp.com/item`;
+        const email = user?.email;
+        const url = `https://still-inlet-24305.herokuapp.com/item?email=${email}`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -22,10 +24,9 @@ const AddInventory = () => {
             .then(result => {
                 console.log(result);
                 toast('Add Successfully');
-                window.location.reload();
+                // window.location.reload();
             })
     };
-
 
 
     return (
