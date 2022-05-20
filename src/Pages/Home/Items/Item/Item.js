@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Item = () => {
     const [items, setItems] = useState([]);
+    console.log(items);
     useEffect(() => {
         fetch('https://still-inlet-24305.herokuapp.com/item')
             .then(res => res.json())

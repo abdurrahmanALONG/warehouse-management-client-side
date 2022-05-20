@@ -18,8 +18,8 @@ const MyItems = () => {
 
     useEffect(() => {
         const handelMyItem = async () => {
-            const email = user.email;
-            const url = `https://still-inlet-24305.herokuapp.com/item?email=${email}`;
+            const email = user?.email;
+            const url = `https://still-inlet-24305.herokuapp.com/items?email=${email}`;
                 const {data} = await axios.get(url, {
                     headers: {
                         authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -30,22 +30,21 @@ const MyItems = () => {
             handelMyItem();
         }, [user]);
 
-            // try {
-            //     const { data } = await axiosPrivate.get(url);
-            //     setMyItems(data);
+        //     try {
+        //         const { data } = await axiosPrivate.get(url);
+        //         setMyItems(data);
 
-            // }
-            // catch (error) {
-            //     console.log(error.message);
-            //     if (error.response.status === 401 || error.response.status === 403) {
-            //         signOut(auth);
-            //         navigate('/login')
-            //     }
+        //     }
+        //     catch (error) {
+        //         console.log(error.message);
+        //         if (error.response.status === 401 || error.response.status === 403) {
+        //             signOut(auth);
+        //             navigate('/login')
+        //         }
 
-            // }
-    //     }
-    //     handelMyItem();
-
+        //     }
+        // }
+        // handelMyItem();
     // }, [user]);
 
 
